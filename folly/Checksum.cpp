@@ -73,7 +73,7 @@ bool crc32c_hw_supported() {
 }
 
 #else
-
+#error No __builtin_ia32_crc32qi
 uint32_t crc32c_hw(const uint8_t *data, size_t nbytes,
     uint32_t startingChecksum) {
   throw std::runtime_error("crc32_hw is not implemented on this platform");
